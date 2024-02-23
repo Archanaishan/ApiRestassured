@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Hp/IdeaProjects/APAutomationRestAssured5X">
+        <classes>
+            <class name="CRUD.GET.NonBDDStyleTestNG">
+                <methods>
+                    <include name="testGetpositive"/>
+                    <include name="testGetNegative1"/>
+                    <include name="testGetNegative2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
