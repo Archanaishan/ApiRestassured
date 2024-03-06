@@ -44,15 +44,25 @@ public class VWOassignment {
         //id not null
         id=validatableResponse.extract().path("id");
         System.out.println(id);
-        Assert.assertNotNull(id);
-        //Statuscode 200
-        Statuscode=validatableResponse.extract().statusCode();
-        Statusmessage=validatableResponse.extract().statusLine();
-        System.out.println(Statusmessage);
-        System.out.println(Statuscode);
         //if(id>0)
-        Assert.assertEquals(Statuscode,200);
-       // else
+        //Statuscode 200
+        //{
+            Assert.assertNotNull(id);
+            Assert.assertEquals(Statuscode,200);
+            Statuscode=validatableResponse.extract().statusCode();
+            Statusmessage=validatableResponse.extract().statusLine();
+            System.out.println(Statusmessage);
+            System.out.println(Statuscode);
+
+        //}
+      // else{
+            Assert.assertEquals(Statuscode,401);
+            Statuscode=validatableResponse.extract().statusCode();
+            Statusmessage=validatableResponse.extract().statusLine();
+            System.out.println(Statusmessage);
+            System.out.println(Statuscode);
+
+       // }
         //Assert.assertEquals(Statuscode,401);
     }
 
